@@ -9,6 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const srcPath = path.resolve(__dirname, "./src");
 const adminPath = path.join(srcPath, "admin");
 const micrositePath = path.join(srcPath, "microsite");
+const landingPath = path.join(srcPath, "landing");
 
 // Custom plugin to handle context-aware @ alias resolution
 const contextAwareAlias = () => {
@@ -30,6 +31,8 @@ const contextAwareAlias = () => {
             basePath = adminPath;
           } else if (importerPath.startsWith(micrositePath)) {
             basePath = micrositePath;
+          } else if (importerPath.startsWith(landingPath)) {
+            basePath = landingPath;
           }
           
           const targetPath = id.replace("@/", "");

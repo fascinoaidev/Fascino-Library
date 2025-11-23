@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./admin/index.css";
 import "./microsite/index.css";
+import "./landing/index.css";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
